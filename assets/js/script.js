@@ -1,7 +1,7 @@
 function myScope() {
     const title = document.querySelector('#title01');
     const audio = document.querySelector('audio');
-    let playSong = false;
+    const playSong = false;
     window.addEventListener('load', function() {
         this.setTimeout(function() {
             title.classList.add('anime');
