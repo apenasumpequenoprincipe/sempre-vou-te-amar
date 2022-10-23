@@ -1,0 +1,197 @@
+:root {
+    --white-color: white;
+    --black-color: black;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2 {font-size: 1.5rem; font-weight: normal;}
+
+div {
+    overflow: hidden;
+}
+.text {  
+    padding: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6rem;
+
+}
+
+.bg-black {
+    opacity: 0.9;
+    background-color: black;
+    color: var(--white-color);
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-parallax {
+    background: var(--black-color) center bottom no-repeat fixed;
+    background-size: cover;
+    height: 50vh;
+    opacity: 0.9;
+}
+
+.img-01 {
+    background-image: url(../imgs/bg-01.jpg);
+}
+
+
+.img-02 {
+    background-image: url(../imgs/bg-05.jpg);
+}
+
+.img-03 {
+    background-image: url(../imgs/bg-06.jpg);
+}
+
+.img-04 {
+    background-image: url(../imgs/bg-02.jpg);
+}
+
+.img-parallax:nth-child(1){
+    height: 95vh;
+
+}
+
+.img-parallax h1, h2 {
+    line-height: 2rem;
+    text-align: center;
+    width: 80%;
+    background-color: var(--black-color);
+    padding: 20px;
+    color: var(--white-color);
+    border-radius: 5px;
+    transform: translateX(-90%);
+    opacity: 0;
+    transition: all 2s;
+}
+
+h2 {
+    color: rgb(168, 0, 31);
+    text-shadow: 1px 1px 3px rgb(255, 34, 34);
+}
+.fim-content {
+    height: 100vh;
+}
+
+.fim-content-text {
+    box-shadow: inset 0 0 100px rgba(38, 0, 0, 0.757);
+    color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.113); */
+    
+}
+
+[anime] {
+    transition: all 2s;
+
+}
+
+[anime="right"] {
+    transform: translateX(-50px);
+    opacity: 0;
+
+}
+
+[anime="left"] {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+main section .anime {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+main section .blur.anime {
+    animation-name: blurAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blurAnimation {
+    0% {
+        filter: blur(0px);
+    }
+
+    5% {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    10% {
+        filter: blur(1px);
+        transform: translate3d(-30px, 0, 0);
+    }
+
+    15% {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0); 
+    }
+
+    50% {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0); 
+    }
+    
+    55% {
+        filter: blur(3px);
+        transform: translate3d(30px, -5px, 0); 
+    }
+
+    60% {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0); 
+    }
+
+    65% {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0); 
+    }
+
+    70% {
+        filter: blur(3px);
+        transform: translate3d(30px, 5px, 0); 
+    }
+
+    75% {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0); 
+    }
+
+    85% {
+        filter: blur(0px);
+        transform: translate3d(0, 0, 0); 
+    }
+    90% {
+        filter: blur(3px);
+        transform: translate3d(30px, 0, 0);
+    }
+
+    95% {
+        filter: blur(3px);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        filter: blur(2px);
+    }
+}
