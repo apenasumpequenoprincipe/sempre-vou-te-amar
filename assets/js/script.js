@@ -6,7 +6,7 @@ function myScope() {
         this.setTimeout(function() {
             title.classList.add('anime');
 
-        }, 500);
+        }, 300);
     });
 
     const elements = document.querySelectorAll('[anime]');
