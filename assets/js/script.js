@@ -45,7 +45,9 @@ function myScope() {
         if (!playSong) {
             audio.play();
             playSong = true;
-        }
+        } else {
+            playSong = false;
+        }    
     }
 
     let time;
